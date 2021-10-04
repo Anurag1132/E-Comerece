@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "476077563043",
+    "project_id": "store2door-a8e95",
+    "storage_bucket": "store2door-a8e95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476077563043:android:fb12ff6322caf34b9db316",
+        "android_client_info": {
+          "package_name": "com.example.store2door"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4-_ZTCRzct_T-YGr8PagALxdkKIuS-6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476077563043:android:5a94992d95e703fa9db316",
+        "android_client_info": {
+          "package_name": "com.example.storetodoor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4-_ZTCRzct_T-YGr8PagALxdkKIuS-6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
