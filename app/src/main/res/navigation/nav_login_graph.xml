@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login_graph"
+    app:startDestination="@id/signUp">
+    <fragment
+        android:id="@+id/userLogin"
+        android:name="com.example.storetodoor.fragments.userLogin"
+        android:label="fragment_user_login"
+        tools:layout="@layout/fragment_user_login" />
+    <fragment
+        android:id="@+id/admin_signIn"
+        android:name="com.example.storetodoor.fragments.admin_signIn"
+        android:label="fragment_admin_sign_in"
+        tools:layout="@layout/fragment_admin_sign_in" />
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.storetodoor.fragments.signUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+</navigation>
