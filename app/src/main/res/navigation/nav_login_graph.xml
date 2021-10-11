@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_login_graph"
-    app:startDestination="@id/signUp">
+    app:startDestination="@id/userLogin">
     <fragment
         android:id="@+id/userLogin"
         android:name="com.example.storetodoor.fragments.userLogin"

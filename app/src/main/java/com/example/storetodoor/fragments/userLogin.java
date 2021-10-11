@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.storetodoor.R;
+import com.example.storetodoor.UserActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -147,8 +148,8 @@ public class userLogin extends Fragment {
 
                             if (task.isSuccessful()) {
                                 Toast.makeText(getActivity().getApplicationContext(), "Login Success!", Toast.LENGTH_SHORT).show();
-                              //  Intent intent = new Intent(getActivity().getApplicationContext(), UserActivity.class);
-                               // startActivity(intent);
+                               Intent intent = new Intent(getActivity().getApplicationContext(), UserActivity.class);
+                               startActivity(intent);
                             } else {
                                 Toast.makeText(getActivity().getApplicationContext(), "Authenticate Failed!" + task.getException().getMessage()   , Toast.LENGTH_SHORT).show();
                             }

@@ -26,4 +26,6 @@
     <string name="cpassword">Confirm Password</string>
     <string name="Dob">Date of birth</string>
     <string name="Login_btn">Login</string>
+    <string name="drawer_open">Open Drawer Menu</string>
+    <string name="drawer_close">Close Drawer Menu</string>
 </resources>

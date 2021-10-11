@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_user"
+    app:startDestination="@id/userDashboardFragment">
+
+    <fragment
+        android:id="@+id/userDashboardFragment"
+        android:name="com.example.storetodoor.fragments.UserDashboardFragment"
+        android:label="fragment_user_dashboard"
+        tools:layout="@layout/fragment_user_dashboard" />
+    <fragment
+        android:id="@+id/aboutus"
+        android:name="com.example.storetodoor.aboutus"
+        android:label="fragment_aboutus"
+        tools:layout="@layout/fragment_aboutus" />
+    <fragment
+        android:id="@+id/updateprofile"
+        android:name="com.example.storetodoor.updateprofile"
+        android:label="fragment_updateprofile"
+        tools:layout="@layout/fragment_updateprofile" />
+</navigation>
