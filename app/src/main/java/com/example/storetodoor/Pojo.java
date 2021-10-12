@@ -2,16 +2,49 @@ package com.example.storetodoor;
 
 public class Pojo {
 
-    String firstName,lastName,mobilenumber,City,price,nameofgrocery;
+    String firstName,lastName,mobilenumber,City,price,nameofgrocery, imageUrl,email,category,Description;
 
-
-    public Pojo(String firstName, String lastName, String mobilenumber, String city, String price, String nameofgrocery) {
+    public Pojo(String firstName, String lastName, String mobilenumber, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mobilenumber = mobilenumber;
         City = city;
-        this.price = price;
-        this.nameofgrocery = nameofgrocery;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Pojo(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPrice() {
@@ -65,4 +98,6 @@ public class Pojo {
     public void setCity(String city) {
         City = city;
     }
+
+
 }
