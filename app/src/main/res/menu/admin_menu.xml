@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item android:title="Home"
+            android:icon="@drawable/city"
+            android:id="@+id/home_drawer"
+            />
+        <item android:title="Pending Orders"
+            android:icon="@drawable/pendingorders"
+            android:id="@+id/pendingorders"
+            />
+        <item android:title="Add items"
+            android:icon="@drawable/additems"
+            android:id="@+id/add_items"/>
+        <item android:title="Chat"
+            android:icon="@drawable/chat"
+            android:id="@+id/chat"/>
+        <item android:title="User Lists"
+            android:icon="@drawable/updateprofile"
+            android:id="@+id/user_list"/>
+        <item android:title="Order Status"
+            android:icon="@drawable/orderstatus"
+            android:id="@+id/orderstatus"/>
+
+    </group>
+</menu>

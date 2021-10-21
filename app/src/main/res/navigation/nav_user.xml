@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_aboutus" />
     <fragment
         android:id="@+id/updateprofile"
-        android:name="com.example.storetodoor.updateprofile"
+        android:name="com.example.storetodoor.fragments.updateprofile"
         android:label="fragment_updateprofile"
         tools:layout="@layout/fragment_updateprofile" />
 </navigation>

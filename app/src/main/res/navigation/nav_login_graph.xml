@@ -11,7 +11,7 @@
         tools:layout="@layout/fragment_user_login" />
     <fragment
         android:id="@+id/admin_signIn"
-        android:name="com.example.storetodoor.fragments.admin_signIn"
+        android:name="com.example.storetodoor.fragments.Admin_signIn"
         android:label="fragment_admin_sign_in"
         tools:layout="@layout/fragment_admin_sign_in" />
     <fragment

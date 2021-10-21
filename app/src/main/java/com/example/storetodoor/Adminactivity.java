@@ -16,7 +16,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,38 +30,32 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 import java.io.IOException;
 
-public class UserActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-
-
+public class Adminactivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     NavController navController;
     NavigationView navigationView;
     FirebaseAuth firebaseAuth;
+    String user;
     StorageReference storageRef;
 
     View headview;
     ImageView headerImage;
-    String ueml;
+
     TextView header_textview_email;
-    /*  InputMethodManager imm = (InputMethodManager) getSystemService(getApplicationContext().INPUT_METHOD_SERVICE);*/
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_adminactivity);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        ueml = firebaseAuth.getCurrentUser().getEmail();
-
+        user=firebaseAuth.getCurrentUser().getEmail();
         setupNavigation();
-        /*imm.toggleSoftInput (InputMethodManager.SHOW_FORCED, InputMethodManager.RESULT_HIDDEN);*/
+        header_textview_email.setText(user);
 
-        header_textview_email.setText(ueml);
 
-        storageRef = FirebaseStorage.getInstance().getReference("images/"+ueml);
+        storageRef = FirebaseStorage.getInstance().getReference("images/"+user);
         try
         {
             File localfile = File.createTempFile("tempfile",".jpg");
@@ -81,79 +74,26 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, "Failed to retrive image", Toast.LENGTH_SHORT).show();
         }
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.Cart_icon:
-
-                Intent account = new Intent(UserActivity.this, AddToCart.class);
-                startActivity(account);
-                break;
-
-            case R.id.logout_Action:
-
-                firebaseAuth.signOut();
-                Intent intent = new Intent(this, SignInActivity.class);
-                startActivity(intent);
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        item.setCheckable(true);
-
-        drawerLayout.closeDrawers();
-
-        int id = item.getItemId();
-
-        if (id == R.id.home_drawer) {
-            navController.navigate(R.id.userDashboardFragment);
-        }
-        else if(id == R.id.about)
-        {
-            navController.navigate(R.id.aboutus);
-        }
-        else if (id == R.id.updateAccountDetails)
-        {
-            navController.navigate(R.id.updateprofile);
-        }
-
-        return true;
-    }
-
     public void setupNavigation() {
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        drawerLayout = findViewById(R.id.drawerUser);
-        navigationView = findViewById(R.id.navigationView);
+        drawerLayout = findViewById(R.id.drawerAdmin);
+        navigationView = findViewById(R.id.navigationView1);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        navController = Navigation.findNavController(this, R.id.user_dashboard_fragment);
+        navController = Navigation.findNavController(this, R.id.admin_dashboard_fragment);
 
         headview = navigationView.getHeaderView(0);
         headerImage = headview.findViewById(R.id.userHeadImage);
         header_textview_email = headview.findViewById(R.id.txt_header_email);
 
-        headerImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(UserActivity.this, "Clicked performed on Imageview", Toast.LENGTH_SHORT).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
-                navController.navigate(R.id.updateprofile);
-
-            }
-        });
     }
 
 
@@ -172,9 +112,56 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.adminmain, menu);
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logout_Action:
 
+                firebaseAuth.signOut();
+                Intent intent = new Intent(this, SignInActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        item.setCheckable(true);
+
+        drawerLayout.closeDrawers();
+
+        int id = item.getItemId();
+
+        if (id == R.id.home_drawer) {
+            navController.navigate(R.id.admindashboardFragment);
+        }
+        else if(id == R.id.pendingorders)
+        {
+
+        }
+        else if (id == R.id.add_items)
+        {
+            navController.navigate(R.id.additemsFragment);
+        }
+
+        else if (id == R.id.chat)
+        {
+
+        }
+        else if (id == R.id.user_list)
+        {
+            navController.navigate(R.id.user_listFragment);
+        }
+        else if (id == R.id.orderstatus) {
+
+        }
+
+        return true;
+    }
 }

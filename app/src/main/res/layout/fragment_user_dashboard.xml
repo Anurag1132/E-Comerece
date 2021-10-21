@@ -38,14 +38,15 @@
 
         <Spinner
             android:id="@+id/spinner_filter"
-            android:layout_width="150dp"
+            android:layout_width="30dp"
             android:layout_height="58dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
             android:layout_weight="1"
-            android:background="@android:drawable/btn_dropdown"
+            android:background="@android:drawable/ic_menu_sort_by_size"
+            android:backgroundTint="#070000"
             android:spinnerMode="dropdown"
             android:textAlignment="center" />
 

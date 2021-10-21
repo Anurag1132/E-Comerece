@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "476077563043",
-    "project_id": "store2door-a8e95",
-    "storage_bucket": "store2door-a8e95.appspot.com"
+    "project_number": "609779233013",
+    "project_id": "store2door-ce0be",
+    "storage_bucket": "store2door-ce0be.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:476077563043:android:fb12ff6322caf34b9db316",
+        "mobilesdk_app_id": "1:609779233013:android:2d6426cdff5755d4d5d5bc",
         "android_client_info": {
-          "package_name": "com.example.store2door"
+          "package_name": "com.anurag.storetodoor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+          "client_id": "609779233013-bvla8mvqksuf4q6diote0ps4qdh9b1uu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD4-_ZTCRzct_T-YGr8PagALxdkKIuS-6k"
+          "current_key": "AIzaSyCl9dheNrVCxBzG7lVDXAkbIkva_Y25DHY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+              "client_id": "609779233013-bvla8mvqksuf4q6diote0ps4qdh9b1uu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -36,27 +36,56 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:476077563043:android:5a94992d95e703fa9db316",
+        "mobilesdk_app_id": "1:609779233013:android:b0ac2e3fba505351d5d5bc",
         "android_client_info": {
-          "package_name": "com.example.storetodoor"
+          "package_name": "com.example.store2door"
         }
       },
       "oauth_client": [
         {
-          "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+          "client_id": "609779233013-bvla8mvqksuf4q6diote0ps4qdh9b1uu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD4-_ZTCRzct_T-YGr8PagALxdkKIuS-6k"
+          "current_key": "AIzaSyCl9dheNrVCxBzG7lVDXAkbIkva_Y25DHY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "476077563043-m8lgceio1jp20aai1ku9p41j52scdgfs.apps.googleusercontent.com",
+              "client_id": "609779233013-bvla8mvqksuf4q6diote0ps4qdh9b1uu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609779233013:android:7b2b5a54345f467cd5d5bc",
+        "android_client_info": {
+          "package_name": "com.example.storetodoor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609779233013-bvla8mvqksuf4q6diote0ps4qdh9b1uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl9dheNrVCxBzG7lVDXAkbIkva_Y25DHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609779233013-bvla8mvqksuf4q6diote0ps4qdh9b1uu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -55,6 +55,7 @@
         android:textSize="20dp"
         android:paddingLeft="200dp"
         android:drawableLeft="@drawable/email"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.594"
@@ -83,16 +84,18 @@
         android:id="@+id/btn_login_user"
         android:layout_width="234dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="35dp"
         android:backgroundTint="#1F911C"
+        android:gravity="center"
         android:text="LogIn"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/forgotpass_txt_user"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_txt"
-        app:layout_constraintVertical_bias="0.1"/>
+        app:layout_constraintTop_toBottomOf="@+id/password_txt" />
 
     <TextView
         android:id="@+id/forgotpass_txt_user"
