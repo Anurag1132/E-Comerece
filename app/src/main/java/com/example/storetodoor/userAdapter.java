@@ -1,14 +1,16 @@
 package com.example.storetodoor;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.core.View;
 
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-
 
 public class userAdapter extends RecyclerView.Adapter<userAdapter.myviewholder>  {
 
@@ -62,7 +64,7 @@ public class userAdapter extends RecyclerView.Adapter<userAdapter.myviewholder> 
             userlist_lastname=itemView.findViewById(R.id.user_list_lastname);
             userlist_city = itemView.findViewById(R.id.user_list_city);
             userlist_mobile = itemView.findViewById(R.id.user_list_mobile);
-             userlist_email=itemView.findViewById(R.id.user_list_email);
+            userlist_email=itemView.findViewById(R.id.user_list_email);
 
         }
 

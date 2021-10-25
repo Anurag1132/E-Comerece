@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 
 import java.util.ArrayList;
 
@@ -28,21 +30,28 @@ public class Dashboardadapter extends RecyclerView.Adapter<Dashboardadapter.view
 
     public Dashboardadapter(ArrayList<Pojo> datalist) {
         this.datalist = datalist;
-
     }
 
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        mContext = parent.getContext();
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_dashboard_recycleview, parent, false);
         return new viewHolder(view);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull  viewHolder holder, int position) {
         holder.name_of_grocery.setText(datalist.get(position).getNameofgrocery());
         holder.price.setText(datalist.get(position).getPrice());
         holder.category.setText(datalist.get(position).getCategory());
+
+        Glide.with(mContext)
+                .load(datalist.get(position).getImageUrl()).into(holder.image);
+
 
         holder.name_of_grocery.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,14 +61,12 @@ public class Dashboardadapter extends RecyclerView.Adapter<Dashboardadapter.view
                 intent.putExtra("nameofgrocery", datalist.get(position).getNameofgrocery());
                 intent.putExtra("price", datalist.get(position).getPrice());
                 intent.putExtra("Description", datalist.get(position).getDescription());
+                intent.putExtra("ImageUrl", datalist.get(position).getImageUrl());
+
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holder.name_of_grocery.getContext().startActivity(intent);
             }
         });
-
-
-
-
 
     }
 

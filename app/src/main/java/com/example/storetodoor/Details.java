@@ -9,13 +9,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.auth.User;
 
+import java.util.HashMap;
+import java.util.Map;
 
 public class Details extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -24,7 +34,7 @@ public class Details extends AppCompatActivity {
     int quantt;
     String price;
     double totall;
-    String quant,ttt,disCusto;
+    String quant,ttt;
     Button cancel,cart;
 
     CollectionReference reference ;
@@ -50,11 +60,15 @@ public class Details extends AppCompatActivity {
         quantity=findViewById(R.id.textQuantity);
         Button add=findViewById(R.id.add);
         Button sub=findViewById(R.id.sub);
-         price=getIntent().getStringExtra("price");
+        price=getIntent().getStringExtra("price");
         textDescription = (TextView) findViewById(R.id.description);
         textname.setText(getIntent().getStringExtra("nameofgrocery"));
         textprice.setText(getIntent().getStringExtra("price"));
         textDescription.setText(getIntent().getStringExtra("Description"));
+        String img = getIntent().getStringExtra("ImageUrl");
+
+        Glide.with(getApplicationContext())
+                .load(img).into(imageitem);
 
 
 
@@ -69,7 +83,7 @@ public class Details extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(Details.this, UserActivity.class);
+                Intent i= new Intent(Details.this,UserActivity.class);
                 startActivity(i);
             }
         });
@@ -91,7 +105,7 @@ public class Details extends AppCompatActivity {
 
                 {
                     AlertDialog.Builder builder = new AlertDialog.Builder(Details.this);
-                    builder.setMessage("The Quantity of Pizza must not be more than 50")
+                    builder.setMessage("The Quantity of item must not be more than 50")
                             .setCancelable(false)
                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
@@ -103,7 +117,6 @@ public class Details extends AppCompatActivity {
                     return;
                 }
                 else {
-                    Toast.makeText(Details.this,"hey i am mad",Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -119,7 +132,7 @@ public class Details extends AppCompatActivity {
                     int x = quantt - 1;
                     String qqq = String.valueOf(x);
                     quantity.setText(qqq);
-                   totall = Double.parseDouble(price) * x;
+                    totall = Double.parseDouble(price) * x;
                     String ttt = String.valueOf(totall);
                     textprice.setText("$"+ttt);
                 }
@@ -127,7 +140,7 @@ public class Details extends AppCompatActivity {
                 else if (quantt==1){
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(Details.this);
-                    builder.setMessage("The Quantity of Pizza must not be less than 1")
+                    builder.setMessage("The Quantity of item must not be less than 1")
                             .setCancelable(false)
                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
@@ -140,7 +153,6 @@ public class Details extends AppCompatActivity {
 
                 }
                 else {
-                    Toast.makeText(Details.this,"hey i am mad",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 quantt=quantt-1;
@@ -163,9 +175,9 @@ public class Details extends AppCompatActivity {
                 String address="";
                 //  if (!hasValidationErrors(name, price, quantuu, des, status)) {
 
-                 reference = db.collection("AddToCart");
+                reference = db.collection("AddToCart");
 
-
+                insertItemData(itemname,price,quantuu,des,status,totalprice,address,userId);
                 //finish();
 
 
@@ -178,5 +190,34 @@ public class Details extends AppCompatActivity {
         });
 
 
+    }
+
+    private void insertItemData(String itemname, String price, String quantuu, String des, String status, String totalprice, String address,String email) {
+        Map<String, Object> ItemDetails = new HashMap<>();
+
+        ItemDetails.put("quantity", quantuu);
+        ItemDetails.put("Description", des);
+        ItemDetails.put("nameofgrocery", itemname);
+        ItemDetails.put("Status", status);
+        ItemDetails.put("price",price);
+        ItemDetails.put("TotalPrice",totalprice);
+        ItemDetails.put("Address", address);
+        ItemDetails.put("userId", email);
+
+
+        db.collection("AddToCart").document().set(ItemDetails)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                        Toast.makeText(getApplication(), "Data inserted successfully", Toast.LENGTH_LONG).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplication(), "Error adding data" + e.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 }

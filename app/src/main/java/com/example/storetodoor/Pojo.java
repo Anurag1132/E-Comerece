@@ -2,14 +2,73 @@ package com.example.storetodoor;
 
 public class Pojo {
 
-    String firstName,lastName,mobilenumber,City,price,nameofgrocery, imageUrl,email,category,Description;
+    String firstName,lastName,mobilenumber,City,price,nameofgrocery, imageUrl,Email,category,Description,Aboutme, id,quantity,Address,Status,TotalPrice;
 
-    public Pojo(String firstName, String lastName, String mobilenumber, String city) {
+    public Pojo(String price, String nameofgrocery, String imageUrl, String email, String category, String description) {
+        this.price = price;
+        this.nameofgrocery = nameofgrocery;
+        this.imageUrl = imageUrl;
+        this.Email = email;
+        this.category = category;
+        this.Description = description;
+    }
+
+    public Pojo(String firstName, String lastName, String mobilenumber, String city, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mobilenumber = mobilenumber;
         City = city;
+        Email = email;
     }
+
+    public String getAboutme() {
+        return Aboutme;
+    }
+
+    public void setAboutme(String aboutme) {
+        Aboutme = aboutme;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
+    }
+
+    public String getTotalPrice() {
+        return TotalPrice;
+    }
+
+    public void setTotalPrice(String totalPrice) {
+        TotalPrice = totalPrice;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 
     public String getDescription() {
         return Description;
@@ -40,11 +99,11 @@ public class Pojo {
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        Email = email;
     }
 
     public String getPrice() {
