@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-
 import java.util.ArrayList;
 
 public class Dashboardadapter extends RecyclerView.Adapter<Dashboardadapter.viewHolder> {
@@ -53,7 +52,7 @@ public class Dashboardadapter extends RecyclerView.Adapter<Dashboardadapter.view
                 .load(datalist.get(position).getImageUrl()).into(holder.image);
 
 
-        holder.name_of_grocery.setOnClickListener(new View.OnClickListener() {
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(holder.name_of_grocery.getContext(), Details.class);

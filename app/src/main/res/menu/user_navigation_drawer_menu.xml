@@ -15,5 +15,9 @@
             android:icon="@drawable/aboutus"
             android:id="@+id/about"
             />
+        <item android:title="My Order"
+            android:icon="@drawable/myorder"
+            android:id="@+id/myOrder1"
+            />
     </group>
 </menu>

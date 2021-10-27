@@ -33,7 +33,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +56,7 @@ public class UserDashboardFragment extends Fragment implements AdapterView.OnIte
 
     //-------------------------------------------------------------------------------------//
     ArrayList<Pojo> filteredList =  new ArrayList<>();
-    String[] searchCategory = {"","           Item Price", "           Item Category"};
+    String[] searchCategory = {"","           Item Price", "           Item Category","           Item Name"};
     String selectedCategory;
     //------------------------------------------------------------------------------------//
 
@@ -79,7 +78,7 @@ public class UserDashboardFragment extends Fragment implements AdapterView.OnIte
 
 
     @Override
-    public void onViewCreated( View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated( View view, @Nullable  Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -169,6 +168,12 @@ public class UserDashboardFragment extends Fragment implements AdapterView.OnIte
             else if(selectedCategory == searchCategory[2])
             {
                 if (model.getCategory().toLowerCase().contains(text.toLowerCase())) {
+                    filteredList.add(model);
+                }
+            }
+            else if(selectedCategory == searchCategory[3])
+            {
+                if (model.getNameofgrocery().toLowerCase().contains(text.toLowerCase())) {
                     filteredList.add(model);
                 }
             }

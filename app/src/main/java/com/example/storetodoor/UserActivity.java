@@ -121,6 +121,10 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         {
             navController.navigate(R.id.updateprofile);
         }
+        else if(id==R.id.myOrder1)
+        {
+            navController.navigate(R.id.myOrder);
+        }
 
         return true;
     }

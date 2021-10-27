@@ -56,7 +56,7 @@ public class Details extends AppCompatActivity {
 
         textname = (TextView) findViewById(R.id.textname);
         textprice = (TextView) findViewById(R.id.textprice);
-        ImageView imageitem=findViewById(R.id.imageItem);
+        ImageView imageitem=findViewById(R.id.imageItem1);
         quantity=findViewById(R.id.textQuantity);
         Button add=findViewById(R.id.add);
         Button sub=findViewById(R.id.sub);
@@ -65,6 +65,7 @@ public class Details extends AppCompatActivity {
         textname.setText(getIntent().getStringExtra("nameofgrocery"));
         textprice.setText(getIntent().getStringExtra("price"));
         textDescription.setText(getIntent().getStringExtra("Description"));
+
         String img = getIntent().getStringExtra("ImageUrl");
 
         Glide.with(getApplicationContext())
@@ -177,7 +178,7 @@ public class Details extends AppCompatActivity {
 
                 reference = db.collection("AddToCart");
 
-                insertItemData(itemname,price,quantuu,des,status,totalprice,address,userId);
+                insertItemData(itemname,price,quantuu,des,status,totalprice,address,userId,img);
                 //finish();
 
 
@@ -192,7 +193,7 @@ public class Details extends AppCompatActivity {
 
     }
 
-    private void insertItemData(String itemname, String price, String quantuu, String des, String status, String totalprice, String address,String email) {
+    private void insertItemData(String itemname, String price, String quantuu, String des, String status, String totalprice, String address,String email,String image) {
         Map<String, Object> ItemDetails = new HashMap<>();
 
         ItemDetails.put("quantity", quantuu);
@@ -200,9 +201,10 @@ public class Details extends AppCompatActivity {
         ItemDetails.put("nameofgrocery", itemname);
         ItemDetails.put("Status", status);
         ItemDetails.put("price",price);
-        ItemDetails.put("TotalPrice",totalprice);
+        ItemDetails.put("Totalprice",totalprice);
         ItemDetails.put("Address", address);
         ItemDetails.put("userId", email);
+        ItemDetails.put("imageUrl",image);
 
 
         db.collection("AddToCart").document().set(ItemDetails)
