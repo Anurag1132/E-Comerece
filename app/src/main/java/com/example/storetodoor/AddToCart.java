@@ -93,11 +93,10 @@ public class AddToCart extends AppCompatActivity {
                 Toast.makeText(AddToCart.this,"Order Placed Successfully",Toast.LENGTH_LONG).show();
                 String status="Ordered";
                 final String address=addresss.getText().toString();
-                String totalprice=total_price.getText().toString();
 
 
                 //  final com.example.pizzaworld.model.PojoDetails PojoDetails=   new  PojoDetails( status,address, totalprice);
-                db.collection("AddToCart").whereEqualTo("userId", mAuth.getCurrentUser().getEmail()).whereEqualTo("status", "Cart").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                db.collection("AddToCart").whereEqualTo("userId", FirebaseAuth.getInstance().getCurrentUser().getEmail()).whereEqualTo("Status", "Cart").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
@@ -172,9 +171,9 @@ public class AddToCart extends AppCompatActivity {
 
             // Update each list item
             DocumentReference ref = db.collection("AddToCart").document(list.get(k));
-            batch.update(ref, "address", addresss.getText().toString());
+            batch.update(ref, "Address", addresss.getText().toString());
             batch.update(ref,"Status","Ordered" );
-            batch.update(ref,"totalprice",total_price.getText().toString());
+            batch.update(ref,"Totalprice",total_price.getText().toString());
 
         }
 
