@@ -20,4 +20,9 @@
         android:name="com.example.storetodoor.fragments.updateprofile"
         android:label="fragment_updateprofile"
         tools:layout="@layout/fragment_updateprofile" />
+    <fragment
+        android:id="@+id/myOrder"
+        android:name="com.example.storetodoor.MyOrder"
+        android:label="fragment_my_order"
+        tools:layout="@layout/fragment_my_order" />
 </navigation>
