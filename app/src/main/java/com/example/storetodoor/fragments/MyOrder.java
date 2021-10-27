@@ -1,4 +1,4 @@
-package com.example.storetodoor;
+package com.example.storetodoor.fragments;
 
 import android.os.Bundle;
 
@@ -8,11 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MyOrder#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.storetodoor.R;
+
+
 public class MyOrder extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
