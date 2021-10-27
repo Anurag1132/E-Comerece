@@ -42,6 +42,7 @@
             android:layout_below="@+id/firstName"
             android:gravity="center"
             android:padding="10dp"
+            android:textAlignment="center"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:hint="@string/last_name"
