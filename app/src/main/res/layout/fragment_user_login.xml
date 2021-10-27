@@ -68,6 +68,7 @@
         android:id="@+id/password_txt"
         android:layout_width="312dp"
         android:layout_height="48dp"
+        android:textAlignment="center"
         android:drawableLeft="@drawable/lock"
         android:hint="Password"
         android:padding="10dp"
