@@ -37,7 +37,7 @@ import static com.example.storetodoor.Storage.*;
 
 public class AddToCart extends AppCompatActivity {
 
-    Button cancel1,payment;
+    TextView cancel1,payment;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     RecyclerView listView;
