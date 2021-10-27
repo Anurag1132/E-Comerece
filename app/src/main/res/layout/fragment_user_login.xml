@@ -55,6 +55,7 @@
         android:textSize="20dp"
         android:paddingLeft="200dp"
         android:drawableLeft="@drawable/email"
+        android:textAlignment="center"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
