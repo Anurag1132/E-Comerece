@@ -43,7 +43,7 @@ public class AdmindashboardFragment extends Fragment implements AdapterView.OnIt
 
     //-------------------------------------------------------------------------------------//
     ArrayList<Pojo> filteredList =  new ArrayList<>();
-    String[] searchCategory = {"           Item Price", "           Item Category"};
+    String[] searchCategory = {"","           Item Price", "           Item Category","           Item Name"};
     String selectedCategory;
     //------------------------------------------------------------------------------------//
 
@@ -146,6 +146,12 @@ public class AdmindashboardFragment extends Fragment implements AdapterView.OnIt
             else if(selectedCategory == searchCategory[2])
             {
                 if (model.getCategory().toLowerCase().contains(text.toLowerCase())) {
+                    filteredList.add(model);
+                }
+            }
+            else if(selectedCategory == searchCategory[3])
+            {
+                if (model.getNameofgrocery().toLowerCase().contains(text.toLowerCase())) {
                     filteredList.add(model);
                 }
             }
