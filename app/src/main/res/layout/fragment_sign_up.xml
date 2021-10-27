@@ -55,6 +55,7 @@
             android:id="@+id/edt_email"
             android:padding="10dp"
             android:layout_below="@+id/lastName"
+            android:textAlignment="center"
             android:gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -67,6 +68,7 @@
         <EditText
             android:id="@+id/edt_password"
             android:layout_below="@+id/edt_email"
+            android:textAlignment="center"
             android:gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
