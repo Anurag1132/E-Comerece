@@ -83,6 +83,7 @@
         <EditText
             android:id="@+id/Cpassword"
             android:layout_below="@+id/edt_password"
+            android:textAlignment="center"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
@@ -97,6 +98,7 @@
         <EditText
             android:id="@+id/dob"
             android:layout_below="@+id/Cpassword"
+            android:textAlignment="center"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
