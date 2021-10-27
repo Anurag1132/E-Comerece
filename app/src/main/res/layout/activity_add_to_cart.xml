@@ -50,13 +50,12 @@
         <LinearLayout
             android:id="@+id/linearLayout_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="300dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/relative_layout">
+            >
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/addcart_recycleView"
@@ -68,7 +67,7 @@
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_height="wrap_content">
 
             <TextView
@@ -106,7 +105,7 @@
             android:hint="Enter the Address for Delivery"
             android:inputType="textPersonName" />
 
-        <Button
+        <TextView
             android:id="@+id/cancel1"
             android:layout_width="match_parent"
             android:layout_height="25dp"
@@ -117,29 +116,26 @@
             android:background="@color/mainapp"
             android:gravity="center"
             android:text="Cancel"
-            android:textColor="@color/white"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold">
 
-        </Button>
+        </TextView>
 
-        <Button
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:id="@+id/payment"
             android:layout_alignParentBottom="true"
             android:text="Proceed to Payment"
             android:gravity="center"
-            android:background="@color/mainapp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp"
-
+            android:background="@color/mainapp"
             >
 
-        </Button>
+        </TextView>
     </LinearLayout>
 </ScrollView>
 
