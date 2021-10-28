@@ -36,6 +36,7 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.viewHold
         return new viewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull  viewHolder holder, int position) {
         holder.ordername.setText(pojoDetails.get(position).getNameofgrocery());
