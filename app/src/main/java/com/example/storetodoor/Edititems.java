@@ -93,7 +93,7 @@ public class Edititems extends AppCompatActivity {
                     }
                 });
 
-                Intent i = new Intent(Edititems.this, Adminactivity.class);
+                Intent i = new Intent(Edititems.this, SignInActivity.class);
                 startActivity(i);
             }
         });
