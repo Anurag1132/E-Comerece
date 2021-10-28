@@ -13,7 +13,7 @@
         <item android:title="Add items"
             android:icon="@drawable/additems"
             android:id="@+id/add_items"/>
-        
+
         <item android:title="Chat"
             android:icon="@drawable/chat"
             android:id="@+id/chat"/>

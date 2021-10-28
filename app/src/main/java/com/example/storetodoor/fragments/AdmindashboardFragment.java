@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -79,11 +80,14 @@ public class AdmindashboardFragment extends Fragment implements AdapterView.OnIt
         adapter = new admindashadapter(datalist);
         recview.setAdapter(adapter);
 
+
         //----------------------------------------------------------------
         searchAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_dropdown_item, searchCategory);
         searchAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         filterSpinner.setAdapter(searchAdapter);
         //----------------------------------------------------------------
+
+
         search_bar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -113,8 +117,6 @@ public class AdmindashboardFragment extends Fragment implements AdapterView.OnIt
 
             }
         });
-
-
 
 
         firestore.collection("Items").get()
