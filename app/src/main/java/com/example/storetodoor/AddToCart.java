@@ -66,9 +66,6 @@ public class AddToCart extends AppCompatActivity {
 
         adapter = new cartAdapter(pojoDetails);
         listView.setAdapter(adapter);
-
-
-
         back=findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
