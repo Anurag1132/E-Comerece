@@ -21,6 +21,7 @@
         <activity android:name=".UserActivity" />
         <activity android:name=".Adminactivity" />
         <activity android:name=".Details" />
+        <activity android:name=".Edititems"/>
     </application>
 
 </manifest>
