@@ -71,8 +71,6 @@ public class Details extends AppCompatActivity {
         Glide.with(getApplicationContext())
                 .load(img).into(imageitem);
 
-
-
         Double temp=Double.parseDouble(price);
         textprice.setText("$"+temp);
 
