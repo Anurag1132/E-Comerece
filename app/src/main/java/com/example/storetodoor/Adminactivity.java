@@ -147,7 +147,7 @@ public class Adminactivity extends AppCompatActivity implements NavigationView.O
         }
         else if (id == R.id.add_items)
         {
-            
+
             navController.navigate(R.id.additemsFragment);
         }
 
