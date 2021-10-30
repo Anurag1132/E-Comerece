@@ -11,13 +11,16 @@
             android:icon="@drawable/account"
             android:id="@+id/updateAccountDetails"
             />
-        <item android:title="About"
-            android:icon="@drawable/aboutus"
-            android:id="@+id/about"
-            />
         <item android:title="My Order"
             android:icon="@drawable/myorder"
             android:id="@+id/myOrder1"
+            />
+        <item android:title="Chat"
+            android:icon="@drawable/chat"
+            android:id="@+id/chat_user"/>
+        <item android:title="About"
+            android:icon="@drawable/aboutus"
+            android:id="@+id/about"
             />
     </group>
 </menu>
