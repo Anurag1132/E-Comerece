@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/chatbackground"
     tools:context=".Chat_user">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <EditText
+            android:id="@+id/messageSend_edttext"
+            android:layout_width="331dp"
+            android:layout_height="52dp"
+            android:background="@color/gray"
+            android:hint="Please enter your message here"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/sendMessage_imgview"
+            android:layout_width="66dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="1dp"
+            android:background="@drawable/ic_sendmessage_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/messageSend_edttext"
+            tools:layout_editor_absoluteY="684dp" />
+
+        <TextView
+            android:id="@+id/Adminmsg_onUserSide_textview"
+            android:layout_width="323dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/mainapp"
+            android:hint="Admin message here."
+            android:paddingLeft="35dp"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/userMessageOn_UserSIde_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/userMessageOn_UserSIde_textview"
+            android:layout_width="323dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/mainapp"
+            android:hint="Your message here."
+            android:paddingLeft="35dp"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/messageSend_edttext"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
