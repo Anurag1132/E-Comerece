@@ -10,4 +10,5 @@
     <color name="textcolor">#ad7909</color>
     <color name="mainapp">#11F10A</color>
     <color name="red">#FB0000</color>
+    <color name="gray">#d3d3d3</color>
 </resources>
