@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/swipeRefreshUser"
     android:background="@drawable/chatbackground"
     tools:context=".Chat_user">
 
@@ -16,10 +17,11 @@
             android:id="@+id/messageSend_edttext"
             android:layout_width="331dp"
             android:layout_height="52dp"
+            android:layout_marginLeft="10dp"
             android:background="@color/gray"
             android:hint="Please enter your message here"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="#8C8888"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -35,7 +37,7 @@
             tools:layout_editor_absoluteY="684dp" />
 
         <TextView
-            android:id="@+id/Adminmsg_onUserSide_textview"
+            android:id="@+id/adminMessageOn_userSIde_textview"
             android:layout_width="323dp"
             android:layout_height="45dp"
             android:layout_marginBottom="52dp"
@@ -46,13 +48,13 @@
             android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@+id/userMessageOn_UserSIde_textview"
+            app:layout_constraintBottom_toTopOf="@+id/userMessageOn_userSIde_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/userMessageOn_UserSIde_textview"
+            android:id="@+id/userMessageOn_userSIde_textview"
             android:layout_width="323dp"
             android:layout_height="45dp"
             android:layout_marginBottom="52dp"
