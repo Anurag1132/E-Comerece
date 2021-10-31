@@ -29,5 +29,5 @@
         android:id="@+id/chat_user2"
         android:name="com.example.storetodoor.Chat_user"
         android:label="fragment_chat_user"
-        tools:layout="@layout/fragment_chat_user" />
+        tools:layout="@layout/fragment_chat" />
 </navigation>
