@@ -56,7 +56,6 @@ public class Adminchatdetails extends AppCompatActivity {
             public void onRefresh() {
 
                 Toast.makeText(getApplicationContext(), "Messages updated!", Toast.LENGTH_SHORT).show();
-
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
