@@ -143,24 +143,20 @@ public class Adminactivity extends AppCompatActivity implements NavigationView.O
         }
         else if(id == R.id.pendingorders)
         {
-
+            navController.navigate(R.id.pendingOrders);
         }
         else if (id == R.id.add_items)
         {
-
             navController.navigate(R.id.additemsFragment);
         }
 
-        else if (id == R.id.chat)
+        else if (id == R.id.chat_admin)
         {
-
+            navController.navigate(R.id.chat_admin_frag);
         }
         else if (id == R.id.user_list)
         {
             navController.navigate(R.id.user_listFragment);
-        }
-        else if (id == R.id.orderstatus) {
-
         }
 
         return true;

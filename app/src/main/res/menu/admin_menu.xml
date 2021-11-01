@@ -13,16 +13,12 @@
         <item android:title="Add items"
             android:icon="@drawable/additems"
             android:id="@+id/add_items"/>
-
         <item android:title="Chat"
             android:icon="@drawable/chat"
-            android:id="@+id/chat"/>
+            android:id="@+id/chat_admin"/>
         <item android:title="User Lists"
             android:icon="@drawable/updateprofile"
             android:id="@+id/user_list"/>
-        <item android:title="Order Status"
-            android:icon="@drawable/orderstatus"
-            android:id="@+id/orderstatus"/>
 
     </group>
 </menu>

@@ -20,4 +20,16 @@
         android:name="com.example.storetodoor.fragments.user_listFragment"
         android:label="fragment_user_list"
         tools:layout="@layout/fragment_user_list" />
+    <fragment
+        android:id="@+id/pendingOrders"
+        android:name="com.example.storetodoor.PendingOrders"
+        android:label="fragment_pending_orders"
+        tools:layout="@layout/fragment_pending_orders" />
+    <fragment
+        android:id="@+id/chat_admin_frag"
+        android:name="com.example.storetodoor.Chat_admin"
+        android:label="fragment_chat_admin"
+        tools:layout="@layout/fragment_chat_admin" />
+
+
 </navigation>
