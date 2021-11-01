@@ -65,7 +65,6 @@ public class PendingDetails extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String mode = modeofDelivary.getText().toString().trim();
 
                 if (TextUtils.isEmpty(mode)) {
