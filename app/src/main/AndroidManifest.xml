@@ -14,16 +14,15 @@
         <activity android:name=".PendingDetails" />
         <activity android:name=".Adminactivity" />
         <activity android:name=".AddToCart" />
-        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignInActivity"/>
         <activity android:name=".Edititems" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserActivity" />
+        <activity android:name=".UserActivity"/>
         <activity android:name=".Details" />
         <activity android:name=".OrderDone" />
     </application>

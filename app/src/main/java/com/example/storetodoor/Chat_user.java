@@ -28,8 +28,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -123,8 +121,6 @@ public class Chat_user extends Fragment {
 
     private void insertUserData(String msg,String fuser) {
         Map<String, Object> Chatdata = new HashMap<>();
-
-
         Chatdata.put("Message", msg);
         Chatdata.put("userId", fuser);
         Chatdata.put("AdminMessage","1");
@@ -133,14 +129,12 @@ public class Chat_user extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-
                         //Toast.makeText(getContext().getApplicationContext(),"Data inserted successfully",Toast.LENGTH_LONG).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 // Toast.makeText(getActivity().getApplicationContext(), "Error adding data" + e.getMessage(), Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -151,10 +145,5 @@ public class Chat_user extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
-
-
-
-
 
 }
