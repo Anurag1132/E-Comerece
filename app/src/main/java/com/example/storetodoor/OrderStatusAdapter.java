@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.ArrayList;
 
@@ -33,9 +33,9 @@ public class OrderStatusAdapter extends RecyclerView.Adapter<OrderStatusAdapter.
         this.orderedStatusList = orderedStatusList;
     }
 
-    @NotNull
+
     @Override
-    public myviewholder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+    public myviewholder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
 
         mcontext = parent.getContext();
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.orderstatus_recyclerview, parent, false);
@@ -44,7 +44,7 @@ public class OrderStatusAdapter extends RecyclerView.Adapter<OrderStatusAdapter.
 
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull OrderStatusAdapter.myviewholder holder, int position) {
+    public void onBindViewHolder(@NonNull  myviewholder holder, int position) {
         holder.nameofgrocery.setText(orderedStatusList.get(position).getNameofgrocery());
         holder.quantity.setText(orderedStatusList.get(position).getQuantity());
         holder.uid.setText(orderedStatusList.get(position).getUserId());

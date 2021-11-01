@@ -25,9 +25,15 @@
         android:name="com.example.storetodoor.fragments.MyOrder"
         android:label="fragment_my_order"
         tools:layout="@layout/fragment_my_order" />
+
     <fragment
-        android:id="@+id/chat_user2"
+        android:id="@+id/orderstatusUser"
+        android:name="com.example.storetodoor.orderstatus"
+        android:label="fragment_orderstatus"
+        tools:layout="@layout/fragment_orderstatus" />
+    <fragment
+        android:id="@+id/chat_frag_user"
         android:name="com.example.storetodoor.Chat_user"
-        android:label="fragment_chat_user"
+        android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
 </navigation>
